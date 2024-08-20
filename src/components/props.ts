@@ -25,3 +25,8 @@ export type SingleBubbleProps = {
     text: string,
     type: string
 };
+
+export type ChatUIProps = {
+    history: SingleBubbleProps[],
+    title: string
+};

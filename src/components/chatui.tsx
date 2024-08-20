@@ -5,14 +5,14 @@ import Minimized from "./minimized.tsx";
 import FullPage from "./fullpage.tsx";
 import BotBubble from "./bot_bubble.tsx";
 import HumanBubble from "./human_bubble.tsx";
-import { SingleBubbleProps } from "./props.ts";
+import { ChatUIProps, SingleBubbleProps } from "./props.ts";
 
-const ChatUI = (props: { history: SingleBubbleProps[] }) => {
-    const { history } = props;
+const ChatUI = (props: ChatUIProps) => {
+    const { history, title } = props;
     return (
         <>
         <ThemeProvider theme={themes.main}>
-            <ChatBox children={BubbleHistory(history)} headerText='Sunport AI' />
+            <ChatBox children={BubbleHistory(history)} headerText={title} />
             <Minimized src="./assets/ChatBubbleIcon.svg"/>
             <FullPage></FullPage>
         </ThemeProvider>
