@@ -18,6 +18,7 @@ server/
 *.js
 *.js.map
 *.d.ts
+!svg.d.ts
 
 # IDE/Editor specific
 .vscode/

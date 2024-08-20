@@ -1,23 +1,44 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme, ThemeOptions } from '@mui/material/styles';
 
-const standardTheme = createTheme({
+// convert hex to rgba
+const hexToRgba = (hex: string, alpha: number) => {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+};
+
+const primaryColor = '#1976d2';
+const main = createTheme({
     palette: {
         primary: {
-            main: '#1976d2',
+            light: '#63a4ff',
+            main: primaryColor,
+            dark: '#004ba0',
         },
         secondary: {
+            light: '#ff5983',
             main: '#dc004e',
+            dark: '#9a0036',
         },
         error: {
+            light: '#e57373',
             main: '#f44336',
+            dark: '#d32f2f',
         },
         background: {
             default: '#fff',
+        },
+        text: {
+            primary: '#000',
+            secondary: '#fff',
         }
     },
+    shadows: ['none', `0 0 15px 0 ${hexToRgba(primaryColor, .12)}`, 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none'],
 });
 
-export { standardTheme };
+const themes = { main };
+export default themes;
 
 /*
 export interface ThemeOptions extends Omit<SystemThemeOptions, 'zIndex'> {

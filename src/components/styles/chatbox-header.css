@@ -1,0 +1,14 @@
+.chatbox-header {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    top: 0;
+    padding: 0px;
+    text-align: center;
+}
+
+#expand-icon {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+}

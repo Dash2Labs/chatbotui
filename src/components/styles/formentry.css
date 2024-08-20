@@ -1,0 +1,15 @@
+.input-group {
+  height: 10%;
+}
+
+#form-entry {
+    width: 100%;
+    height: 25%;
+    position: relative;
+    padding: 0;
+    align-content: flex-end;
+}
+
+#input-text-box {
+    overflow-y: scroll;
+}

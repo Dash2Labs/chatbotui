@@ -1,10 +1,22 @@
 import React from "react";
-import { Theme } from "@mui/material/styles";
+
+export type ChatBoxProps = {
+    headerText: string,
+    children?: React.ReactNode[],
+};
+
+export type HeaderProps = {
+    children?: React.ReactNode[],
+    text?: string,
+    expand?: boolean,
+};
 
 export type BubbleProps = {
-    theme: Theme,
-    borderRadius: string,
-    padding: string,
-    margin: string,
-    children?: React.ReactNode,
+    children?: React.ReactNode[],
+    text: string,
+};
+
+export type MinimizedProps = {
+    style?: React.CSSProperties,
+    src: string
 };

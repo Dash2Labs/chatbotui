@@ -1,0 +1,15 @@
+.bot-bubble {
+  clear: both;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  float: left;
+}
+
+.human-bubble {
+  clear: both;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  float: right;
+}

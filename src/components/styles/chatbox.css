@@ -1,0 +1,22 @@
+.chatbox {
+  margin: 1px;
+  border-radius: 5px;
+  padding: 0px;
+  height: 300px;
+  width: 200px;
+  cursor: move;
+  z-index: 10;
+  position: relative;
+}
+
+#drag_chatbox {
+    position: absolute;
+    z-index: 9;
+    display: none;
+    bottom: 0;
+    right: 0;
+}
+
+#fullpage_chatbox {
+    display: none;
+}
