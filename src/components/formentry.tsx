@@ -1,5 +1,5 @@
 import { React } from './common_imports.ts';
-import { OutlinedInput, OutlinedInputProps, FormControl, TextField } from '@mui/material';
+import { OutlinedInput, OutlinedInputProps, FormControl } from '@mui/material';
 import './styles/formentry.css';
 
 const FormEntry = (props: OutlinedInputProps) => (

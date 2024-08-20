@@ -1,8 +1,9 @@
-import { React, useTheme } from './common_imports.ts';
+import { React, useTheme, chooseThemeMode } from './common_imports.ts';
 import FormEntry from './formentry.tsx';
 import Header from './header.tsx';
 import { ChatBoxProps } from './props.ts';
 import { dragElement } from './drag_element.ts';
+import { Box } from '@mui/material';
 import './styles/chatbox.css';
 
 
@@ -13,16 +14,17 @@ const ChatBox = (props: ChatBoxProps) => {
     if (!children) {
         children = [];
     }
-    const chatbox = React.createElement('div', {
-        style: {
-            color: theme.palette.text.primary,
-            backgroundColor: theme.palette.background.default,
-            borderColor: theme.palette.secondary.main,
-            borderStyle: 'solid',
-            boxShadow: theme.shadows[1],
-        },
-        className: 'chatbox'
-    },<Header text={headerText} expand={true}/>, <div>{children}</div>, <FormEntry />);
+    const style = {
+        color: chooseThemeMode(theme.palette.text.primary, null, theme.palette.text.secondary, theme),
+        backgroundColor: chooseThemeMode(theme.palette.background.default, null, theme.palette.background.paper, theme),
+        borderColor: chooseThemeMode(theme.palette.secondary.main, theme.palette.secondary.light, theme.palette.secondary.dark, theme),
+        borderStyle: 'solid'
+    }
+    const chatbox = <Box sx={style} className='chatbox' boxShadow={1}>
+        <Header text={headerText} expand={true}/>
+        <div>{children}</div>
+        <FormEntry />
+    </Box>;
 
     return (<div>
         <div id="drag_chatbox" onClick={(e)=>(dragElement(e.currentTarget))}>

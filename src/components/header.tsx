@@ -1,5 +1,5 @@
 import { IconButton, SvgIcon } from '@mui/material';
-import { React, useTheme } from './common_imports.ts';
+import { React, useTheme, chooseThemeModeS } from './common_imports.ts';
 import { HeaderProps } from './props.ts';
 import ExpandIcon from './assets/ExpandIcon.svg';
 import './styles/chatbox-header.css';
@@ -10,9 +10,9 @@ const Header = (props: HeaderProps) => {
     const theme = useTheme();
     const properties = {
         style: {
-            color: theme.palette.text.primary,
-            backgroundColor: theme.palette.background.default,
-            borderColor: theme.palette.secondary.main,
+            color: chooseThemeModeS('color', theme),
+            backgroundColor: chooseThemeModeS('backGroundColor', theme),
+            borderColor: chooseThemeModeS('borderColor', theme),
             padding: '0px',
             margin: '0px',
             borderBottomStyle: 'solid',

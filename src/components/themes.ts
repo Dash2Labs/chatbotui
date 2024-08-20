@@ -1,4 +1,4 @@
-import { createTheme, ThemeOptions } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 
 // convert hex to rgba
 const hexToRgba = (hex: string, alpha: number) => {
@@ -9,6 +9,7 @@ const hexToRgba = (hex: string, alpha: number) => {
 };
 
 const primaryColor = '#1976d2';
+const secondaryColor = '#dc004e';
 const main = createTheme({
     palette: {
         primary: {
@@ -18,7 +19,7 @@ const main = createTheme({
         },
         secondary: {
             light: '#ff5983',
-            main: '#dc004e',
+            main: secondaryColor,
             dark: '#9a0036',
         },
         error: {
@@ -28,13 +29,14 @@ const main = createTheme({
         },
         background: {
             default: '#fff',
+            paper: '#fff',
         },
         text: {
             primary: '#000',
             secondary: '#fff',
         }
     },
-    shadows: ['none', `0 0 15px 0 ${hexToRgba(primaryColor, .12)}`, 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none'],
+    shadows: ['none', `0 0 25px 0 ${hexToRgba(secondaryColor, .12)}`, `0 0 25px 0 ${hexToRgba(secondaryColor, .12)}`, `0 0 25px 0 ${hexToRgba(secondaryColor, .12)}`, 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none', 'none'],
 });
 
 const themes = { main };

@@ -1,4 +1,4 @@
-import { React, useTheme } from './common_imports.ts';
+import { React, useTheme, chooseThemeModeS } from './common_imports.ts';
 import { BubbleProps } from './props.ts';
 import './styles/bubbles.css';
 
@@ -7,8 +7,8 @@ const HumanBubble = (props: BubbleProps) => {
     const theme = useTheme();
     return React.createElement('span', {
         style: {
-            backgroundColor: theme.palette.secondary.main,
-            borderColor: theme.palette.secondary.main,
+            backgroundColor: chooseThemeModeS('backgroundColor', theme),
+            borderColor: chooseThemeModeS('borderColor', theme),
             padding: '2px',
             margin: '2px',
             right: '0', // Set the right property to '0' to align the element to the far right
