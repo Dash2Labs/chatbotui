@@ -20,3 +20,8 @@ export type MinimizedProps = {
     style?: React.CSSProperties,
     src: string
 };
+
+export type SingleBubbleProps = {
+    text: string,
+    type: string
+};
