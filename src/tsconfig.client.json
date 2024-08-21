@@ -6,20 +6,27 @@
       "dom",
       "dom.iterable"
     ],
-    "composite": true,
     "target": "ES2023",
+    "emitDeclarationOnly": true,
     "allowImportingTsExtensions": true,
     "allowArbitraryExtensions": true,
     "declaration": true,
-    "emitDeclarationOnly": true,
     "jsx": "react-jsx",
-    "outDir": "../out",
+    "declarationDir": "../types",
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "rootDir": ".",
+    "module":"Node16"
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "svg.d.ts"
-  ]
+    "**/*",
+    "./components/**/*.ts",
+    "./components/**/*.tsx",
+    "./components/assets/**/*.svg",
+    "./components/assets/**/*.png",
+    "./components/styles/**/*.css",    
+    "svg.d.ts",
+  ],
+  "exclude": ["node_modules", "dist", "server"]
 }

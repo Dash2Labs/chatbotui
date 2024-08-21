@@ -6,5 +6,6 @@
     {
       "path": "./src/tsconfig.client.json"
     }
-  ]
+  ],
+  "exclude": ["dist", "node_modules", "build", "index.ts"]
 }

@@ -1,8 +1,8 @@
-import { React, useTheme, chooseThemeMode } from './common_imports.ts';
-import FormEntry from './formentry.tsx';
-import Header from './header.tsx';
-import { ChatBoxProps } from './props.ts';
-import { dragElement } from './drag_element.ts';
+import { React, useTheme, chooseThemeMode } from './common_imports.js';
+import FormEntry from './formentry.js';
+import Header from './header.js';
+import { ChatBoxProps } from './props.js';
+import { dragElement } from './drag_element.js';
 import { Box } from '@mui/material';
 import './styles/chatbox.css';
 

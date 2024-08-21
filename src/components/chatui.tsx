@@ -1,11 +1,11 @@
 import { ThemeProvider } from "@mui/material";
-import themes from "./themes.ts";
-import ChatBox from "./chatbox.tsx";
-import Minimized from "./minimized.tsx";
-import FullPage from "./fullpage.tsx";
-import BotBubble from "./bot_bubble.tsx";
-import HumanBubble from "./human_bubble.tsx";
-import { ChatUIProps, SingleBubbleProps } from "./props.ts";
+import themes from "./themes.js";
+import ChatBox from "./chatbox.js";
+import Minimized from "./minimized.js";
+import FullPage from "./fullpage.js";
+import BotBubble from "./bot_bubble.js";
+import HumanBubble from "./human_bubble.js";
+import { ChatUIProps, SingleBubbleProps } from "./props.js";
 
 const ChatUI = (props: ChatUIProps) => {
     const { history, title } = props;

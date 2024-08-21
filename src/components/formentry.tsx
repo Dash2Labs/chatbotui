@@ -1,4 +1,4 @@
-import { React } from './common_imports.ts';
+import { React } from './common_imports.js';
 import { OutlinedInput, OutlinedInputProps, FormControl } from '@mui/material';
 import './styles/formentry.css';
 

@@ -1,5 +1,5 @@
-import { React, useTheme, chooseThemeModeP } from './common_imports.ts';
-import { BubbleProps } from './props.ts';
+import { React, useTheme, chooseThemeModeP } from './common_imports.js';
+import { BubbleProps } from './props.js';
 import './styles/bubbles.css';
 
 const BotBubble = (props: BubbleProps) => {

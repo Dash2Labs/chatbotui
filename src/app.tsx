@@ -1,10 +1,10 @@
 import React from 'react';
-import themes from './components/themes.ts';
-import HumanBubble from './components/human_bubble.tsx';
-import BotBubble from './components/bot_bubble.tsx';
-import ChatBox from './components/chatbox.tsx';
-import Minimized from './components/minimized.tsx';
-import FullPage from './components/fullpage.tsx';
+import themes from './components/themes.js';
+import HumanBubble from './components/human_bubble.js';
+import BotBubble from './components/bot_bubble.js';
+import ChatBox from './components/chatbox.js';
+import Minimized from './components/minimized.js';
+import FullPage from './components/fullpage.js';
 import { ThemeProvider } from '@mui/material';
 
 const chatHistory = [<BotBubble text="Hello, how can I help you today?" />,

@@ -1,6 +1,6 @@
 import { IconButton, SvgIcon } from '@mui/material';
-import { React, useTheme, chooseThemeModeS } from './common_imports.ts';
-import { HeaderProps } from './props.ts';
+import { React, useTheme, chooseThemeModeS } from './common_imports.js';
+import { HeaderProps } from './props.js';
 import ExpandIcon from './assets/ExpandIcon.svg';
 import './styles/chatbox-header.css';
 

@@ -1,5 +1,5 @@
-import { React } from './common_imports.ts';
-import { MinimizedProps } from './props.ts';
+import { React } from './common_imports.js';
+import { MinimizedProps } from './props.js';
 import ChatBubbleIcon from "./assets/ChatBubbleIcon.svg";
 
 const Minimized = (props: MinimizedProps) => {
